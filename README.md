@@ -16,7 +16,7 @@ Dedicated routes: /contact/ and /projects/pet-moment-shop/. Old illustrative pro
 
 Career, education, skills, name, location, and receiving email come from the supplied Steve Wohlwend Resume.pdf. The original PDF is served unchanged at /assets/steve-wohlwend-resume.pdf.
 
-Pet Moment Shop was supplied by the owner as a personal project. Project descriptions reflect the publicly visible experience at https://petmomentshop.com/. Screenshots were captured from the live site on October 11, 2026. No backend stack, conversion metrics, or implementation claims are inferred from those screenshots.
+Pet Moment Shop was confirmed by the owner as a team project. Project descriptions reflect the publicly visible experience at https://petmomentshop.com/. Screenshots were captured from the live site on October 11, 2026. No team size, individual responsibilities, backend stack, conversion metrics, or implementation claims are inferred from those screenshots.
 
 The owner portrait is retained in assets/steve-portrait.jpg outside the published dist directory. The Contact page has no portrait or visitor upload.
 
