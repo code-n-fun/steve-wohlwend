@@ -1,6 +1,6 @@
 # Steve Wohlwend portfolio
 
-A buildless portfolio grounded in Steve's supplied resume, with a dedicated Pet Moment Shop case study and original resume PDF.
+A buildless portfolio grounded in Steve's corrected resume content, with a dedicated collaboration case study and a generated, text-searchable resume PDF.
 
 ## Run locally or on a LAN
 
@@ -14,9 +14,21 @@ Dedicated routes: /contact/ and /projects/pet-moment-shop/. Old illustrative pro
 
 ## Content sources
 
-Career, education, skills, name, location, and receiving email come from the supplied Steve Wohlwend Resume.pdf. The original PDF is served unchanged at /assets/steve-wohlwend-resume.pdf.
+Career, education, skills, name, location, and receiving email come from the supplied Steve Wohlwend Resume.pdf, with the owner's subsequent corrections taking precedence. Enterprise Java is the primary focus; Python is a supporting language. Chase includes the IBM DSAR microservice work and Terraform/AWS experience, not FastAPI or TypeScript. Wells Fargo emphasizes MCP tools and agent API endpoints, not React interfaces, Terraform, or AWS. The corrected PDF is served at /assets/steve-wohlwend-resume.pdf, so the existing View Resume buttons open the updated file.
 
-Pet Moment Shop was confirmed by the owner as a team project. Project descriptions reflect the publicly visible experience at https://petmomentshop.com/. Screenshots were captured from the live site on October 11, 2026. No team size, individual responsibilities, backend stack, conversion metrics, or implementation claims are inferred from those screenshots.
+## Resume PDF
+
+The editable, print-ready source is resume/steve-wohlwend.html. It preserves the original contact information, education, employment dates, and accurate AEP, Lexon, McGraw-Hill, and Fiserv bullet points, while applying the owner's corrections to the summary, Chase, and Wells Fargo.
+
+To regenerate the PDF locally, run: node scripts/build-resume.mjs
+
+This optional export requires Playwright and Chrome. The script uses the existing qa/node_modules/playwright installation on this machine. If necessary, install local export tools with npm install --prefix qa --no-save playwright. Set RESUME_CHROME_PATH to select another Chrome executable, or install Playwright's Chromium browser.
+
+The generated PDF is committed in dist/assets; Vercel needs only the existing node scripts/build-pages.mjs build command. Do not add the browser-based PDF export to Vercel's build. Include resume/ and scripts/build-resume.mjs in GitHub if you want to retain the editable source and export tool.
+
+The original PDF is backed up locally at .resume-backup/steve-wohlwend-resume-original.pdf. That folder is ignored by Git and is outside the served dist directory.
+
+Pet Moment Shop is labeled as a team collaboration and presented separately from Steve's enterprise Java experience. Project descriptions reflect the publicly visible experience at https://petmomentshop.com/. Screenshots were captured from the live site on October 11, 2026. No team size, individual responsibilities, backend stack, conversion metrics, or implementation claims are inferred from those screenshots.
 
 The owner portrait is retained in assets/steve-portrait.jpg outside the published dist directory. The Contact page has no portrait or visitor upload.
 
